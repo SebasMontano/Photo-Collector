@@ -126,31 +126,30 @@ public class Main {
 	}
 	private void editAlbum()
 	{
-		String tit, modTit, type;
+		String tit, modTit, aType;
 		int numPages, numPics;
 
 		System.out.println("Ingrese el titulo del album que desea editar:");
 		tit = sc.nextLine();
-		sc.nextLine();
 
 		System.out.println("Ingrese el nuevo titulo que desea ponerle:");
 		modTit = sc.nextLine();
-		sc.nextLine();
 
 		System.out.println("Ingrese el nuevo numero de paginas que quiere que tenga este album:");
 		numPages = sc.nextInt();
+		sc.nextLine();
 
 		System.out.println("Ingrese el nuevo numero de fotos por pagina que quiere que tenga el album:");
 		numPics = sc.nextInt();
-
+		sc.nextLine();
 
 		System.out.println("Ingrese el nuevo tipo de album que quiere que tenga el album (DIGITAL, ANALOGIC)");
-		type = sc.nextLine();
-		type = type.toUpperCase();
+		aType = sc.nextLine();
+		aType = aType.toUpperCase();
 
 		if(tit != null && tit != "" && modTit != "" && modTit != null)
 		{
-			collector.editAlbum(tit, modTit, numPages, numPics, type);
+			collector.editAlbum(tit, modTit, numPages, numPics, aType);
 		}
 	}
 	private void createAlbum() {
@@ -169,8 +168,8 @@ public class Main {
 				numPics = sc.nextInt();
 				sc.nextLine();
 				System.out.println("Tipo del album (DIGITAL, ANALOGIC): ");
-				type = sc.nextLine();
-				type= type.toUpperCase();
+				aType = sc.nextLine();
+				aType= aType.toUpperCase();
 				
 				collector.addAlbum(tit, numPages, numPics, aType);
 				
